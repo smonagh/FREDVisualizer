@@ -8,12 +8,13 @@ A powerful visualization tool for Federal Reserve Economic Data (FRED). Easily f
 - **Interactive Visualizations**: Create and customize charts for economic indicators
 - **Multiple Chart Types**: Support for line charts, bar charts, and more
 - **Data Comparison**: Compare multiple economic series side-by-side
-- **Export Options**: Save visualizations and data for reports
 - **User-Friendly Interface**: Intuitive design for quick analysis
 
 ## Requirements
 
 - Python 3.8+
+- Node
+- Docker
 - FRED API Key (get one at [https://fred.stlouisfed.org/docs/api/](https://fred.stlouisfed.org/docs/api/))
 
 ## Installation
@@ -24,12 +25,7 @@ A powerful visualization tool for Federal Reserve Economic Data (FRED). Easily f
    cd FREDVisualizer
    ```
 
-2. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-3. Set up your FRED API key:
+2. Set up your FRED API key:
    ```bash
    export FRED_API_KEY="your_api_key_here"
    ```
@@ -38,7 +34,7 @@ A powerful visualization tool for Federal Reserve Economic Data (FRED). Easily f
 
 Run the application:
 ```bash
-python main.py
+docker compose up
 ```
 
 Then navigate to the interface and:
