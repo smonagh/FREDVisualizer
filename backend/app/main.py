@@ -1,11 +1,13 @@
-from app.services.fred_search_service import get_search
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi_cache import FastAPICache
 from fastapi_cache.backends.redis import RedisBackend
 from redis import asyncio as aioredis
+
 from app.routes.route import router
 from app.env import REDIS_URL
+import app.logging_config
+from app.middleware.request_logger import RequestLoggerMiddleware
 
 app = FastAPI(title="FREDVisualizer")
 app.include_router(router)
@@ -16,6 +18,7 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+app.add_middleware(RequestLoggerMiddleware)
 
 @app.on_event("startup")
 async def startup():
