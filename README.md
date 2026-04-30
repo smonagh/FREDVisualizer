@@ -6,7 +6,6 @@ A powerful visualization tool for Federal Reserve Economic Data (FRED). Easily f
 
 - **Data Retrieval**: Fetch real-time economic data from the FRED API
 - **Interactive Visualizations**: Create and customize charts for economic indicators
-- **Multiple Chart Types**: Support for line charts, bar charts, and more
 - **Data Comparison**: Compare multiple economic series side-by-side
 - **User-Friendly Interface**: Intuitive design for quick analysis
 
